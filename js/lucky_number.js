@@ -106,9 +106,6 @@ function flipCardInterval(cardID, finalDigit, index) {
             flippedCount++;
             revealedDigits[index] = finalDigit;
 
-            console.log('Revealed Digits:', revealedDigits);
-            console.log('Flipped:', flippedCount);
-
             // Check if all cards are flipped
             if (flippedCount === luckyDigits.length) {
                 setTimeout(() => {
@@ -142,9 +139,6 @@ generateBtn.addEventListener('click', function() {
 
     // Generate a random number from the range
     const randomNumber = randomIntFromInterval(minRange, maxRange);
-    console.log('Generated Lucky Number:', randomNumber);
-    console.log('Required Digits:', digitCount);
-    console.log('Padded Number:', padNumber(randomNumber, digitCount));
 
     // Generate envelopes for each digit
     generateEnvelopes(randomNumber, digitCount);
@@ -179,9 +173,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // Generate initial lucky number
     const randomNumber = randomIntFromInterval(minRange, maxRange);
-    console.log('Initial Lucky Number:', randomNumber);
-    console.log('Required Digits:', digitCount);
-    console.log('Padded Number:', padNumber(randomNumber, digitCount));
 
     generateEnvelopes(randomNumber, digitCount);
 });
